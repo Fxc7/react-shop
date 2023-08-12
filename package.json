@@ -1,16 +1,16 @@
 {
-  "name": "react-vite-shop",
+  "name": "react-shop",
   "description": "A simple react app",
   "author": "FarhanXCode7",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Fxc7/react-vite-shop.git"
+    "url": "https://github.com/Fxc7/react-shop.git"
   },
   "bugs": {
-    "url": "https://github.com/Fxc7/react-vite-shop/issues"
+    "url": "https://github.com/Fxc7/react-shop/issues"
   },
-  "homepage": "https://github.com/Fxc7/react-vite-shop#readme",
+  "homepage": "https://github.com/Fxc7/react-shop#readme",
   "private": true,
   "version": "0.0.0",
   "type": "module",
