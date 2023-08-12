@@ -1,0 +1,355 @@
+@import url('https://fonts.googleapis.com/css2?family=Victor+Mono:wght@300&family=Tilt+Prism&family=Chango&family=Prompt:wght@500&family=Varela+Round&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Victor Mono', monospace;
+}
+
+#root {
+  scroll-behavior: smooth;
+  overflow: hidden;
+  background-color: rgb(240, 248, 255);
+}
+
+.home-page {
+  background-image: url(/background.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  ;
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0px 1px 3px 2px rgba(0, 0, 0, 1);
+  -webkit-box-shadow: 0px 1px 3px 2px rgba(0, 0, 0, 1);
+  -moz-box-shadow: 0px 1px 3px 2px rgba(0, 0, 0, 1);
+}
+
+.home-page::before {
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 100%;
+  position: absolute;
+}
+
+.home-page .row .col:nth-child(2) img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+.home-page .row .col:nth-child(2) {
+  padding: 10px;
+}
+
+.font-tilt {
+  font-family: 'Tilt Prism', cursive;
+}
+
+.font-apple {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Lato, Helvatica, Arial, sans-serif;
+  font-weight: bold;
+}
+
+.font-varela {
+  font-size: small;
+  font-family: 'Varela Round', sans-serif;
+}
+
+.font-passion {
+  font-family: 'Passion One', cursive;
+}
+
+.font-prompt {
+  font-family: 'Prompt', sans-serif;
+}
+
+.text-small {
+  font-size: small;
+}
+
+nav .container-fluid {
+  background-color: #000000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.514);
+  transition: all 0.3 ease;
+  -webkit-transition: all 0.3 ease;
+  -moz-transition: all 0.3 ease;
+  -ms-transition: all 0.3 ease;
+  -o-transition: all 0.3 ease;
+}
+
+nav .container-fluid a.navbar-brand {
+  line-height: 2;
+}
+
+nav .container-fluid .navbar-collapse .navbar-nav .nav-item a:not(.active) {
+  color: #ffffff;
+  font-size: 12px;
+}
+
+nav form input:focus {
+  font-size: small;
+}
+
+nav form input::placeholder,
+nav form button span {
+  font-size: 12px;
+}
+
+.content-component .row:nth-child(2) {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-content: center;
+  gap: 10px;
+}
+
+.active {
+  color: #ae0000;
+  font-weight: bold;
+}
+
+.product-page {
+  padding-top: 50px;
+}
+
+.product-page .row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 20px;
+  padding-inline: 10px;
+}
+
+.product-page .row .col {
+  padding: 10px;
+}
+
+.product-page .row .col .card img {
+  height: 200px;
+  object-fit: cover;
+}
+
+.product-page .row .col .card .card-body button {
+  width: 100px;
+  height: 40px;
+  border-radius: 5px;
+  border: none;
+  background-color: #000000;
+  color: #ffffff;
+  font-size: 15px;
+  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+}
+
+.product-page .row .col .card .card-body button:hover {
+  background-color: #ffffff;
+  border: 1px solid #000000;
+  color: #000000;
+  outline: none;
+}
+
+.product-page .row .col .card .card-body .card-title {
+  font-size: large;
+}
+
+.product-page .row .col .card .card-body .card-text {
+  font-size: small;
+}
+
+.product-page .row .col .card img {
+  object-fit: cover;
+  transition: all 0.6 ease;
+  -webkit-transition: all 0.6 ease;
+  -moz-transition: all 0.6 ease;
+  -ms-transition: all 0.6 ease;
+  -o-transition: all 0.6 ease;
+}
+
+.product-page .row .col .card img:hover {
+  background-color: #000000;
+  opacity: 80%;
+}
+
+.modal-dialog .modal-header .modal-title {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.modal-dialog .modal-header button.btn-close {
+  outline: none;
+}
+
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #000000;
+  color: #ffffff;
+  line-height: 2;
+  padding-top: 10px;
+  margin-top: 10px;
+}
+
+@media screen and (max-width: 1280px) {
+  .home-page header .container {
+    padding-top: 95px;
+    padding-left: 35px;
+  }
+
+  .content-component .row .col {
+    margin: 0 15px;
+  }
+
+  .content-component .row .col h1 {
+    text-decoration: underline;
+  }
+  .content-component .row .col p {
+    font-size: 11px;
+    font-weight: 700;
+  }
+
+  footer p {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  .home-page header .container {
+    padding-top: 45px;
+    padding-left: 35px;
+  }
+
+  .content-component .row .col {
+    margin: 0 15px;
+  }
+
+  .content-component .row .col p {
+    font-size: 16px;
+    font-weight: 700;
+  }
+
+  footer p {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .home-page header .container {
+    padding-top: 220px;
+  }
+
+  .content-component .row .col {
+    margin: 0 15px;
+  }
+
+  .content-component .row .col p {
+    font-size: 16px;
+    font-weight: 700;
+  }
+
+  footer p {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .home-page header .container {
+    padding-top: 220px;
+  }
+
+  .content-component .row .col {
+    margin: 0 15px;
+  }
+
+  .content-component .row .col p {
+    font-size: 16px;
+    font-weight: 700;
+  }
+
+  footer p {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .home-page header .container {
+    padding-top: 50px;
+  }
+
+  .content-component .row .col {
+    margin: 0 15px;
+  }
+
+  .content-component .row .col p {
+    font-size: 16px;
+    font-weight: 700;
+  }
+
+  footer p {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .home-page {
+    background-attachment: fixed;
+  }
+
+  .home-page header .container {
+    padding-top: 50px;
+  }
+
+  .content-component .row .col {
+    margin: 0 10px;
+  }
+
+  .content-component .row .col p {
+    font-size: 11px;
+    font-weight: 700;
+  }
+
+  footer p {
+    font-size: 10px;
+  }
+}
+
+
+
+@media screen and (max-width: 390px) {
+  .home-page header .container {
+    padding-top: 30px;
+  }
+
+  .content-component .row .col {
+    margin: 0 10px;
+  }
+
+  .content-component .row .col p {
+    font-size: 9px;
+    font-weight: 700;
+  }
+}
