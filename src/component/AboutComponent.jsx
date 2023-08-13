@@ -6,10 +6,10 @@ const AboutComponent = () => {
         <div className="content-component min-vh-100 pt-5">
             <Row>
                 <Col>
-                    <h1 className="fw-bold text-center font-tilt">
+                    <h1 data-aos="zoom-in-up" className="fw-bold text-center font-tilt">
                         {title}
                     </h1>
-                    <p className="text-center">
+                    <p className="text-center" data-aos="zoom-in" data-aos-delay="100">
                         {about_text}
                     </p>
                 </Col>
@@ -17,7 +17,7 @@ const AboutComponent = () => {
             <Row lg={3} sm={1} className="pt-5 m-3">
                 {
                     about.map((item, index) => (
-                        <Card key={index} className="text-center align-items-center pt-2">
+                        <Card key={index} className="text-center align-items-center pt-2" data-aos={item.animate}>
                             <item.icon size={50} />
                             <h3 className="fw-bold text-center font-tilt">{item.title}</h3>
                             <p className="text-center text-small">

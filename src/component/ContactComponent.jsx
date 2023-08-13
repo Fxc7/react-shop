@@ -3,11 +3,11 @@ import { Container, Row, Col, Form, Button } from 'react-bootstrap';
 
 const ContactComponent = () => {
     return (
-        <Container className="page-contact min-vh-100 py-5">
+        <Container className="page-contact min-vh-100">
             <Row className="justify-content-center">
                 <Col lg={6}>
-                    <h2 className="mb-4 font-tilt text-center fw-bold text-decoration-underline">Contact US</h2>
-                    <p className="text-center fw-bold text-small mb-5">"Connect with us for seamless communication and exceptional service. Our doors are always open, so don't hesitate to reach out. Let's build a lasting relationship that exceeds your expectations. Contact us today and experience the difference."</p>
+                    <h2 className="mb-4 font-tilt text-center fw-bold text-decoration-underline" data-aos="zoom-in-up">Contact US</h2>
+                    <p className="text-center fw-bold text-small mb-5" data-aos="zoom-in">"Connect with us for seamless communication and exceptional service. Our doors are always open, so don't hesitate to reach out. Let's build a lasting relationship that exceeds your expectations. Contact us today and experience the difference."</p>
                     <Form>
                         <Form.Group controlId="formName">
                             <Form.Label>Name</Form.Label>

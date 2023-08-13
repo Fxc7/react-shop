@@ -1,5 +1,3 @@
-import React from 'react';
-
 import ProductComponent from '../component/ProductComponent.jsx';
 
 const ProductPages = () => {

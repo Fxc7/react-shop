@@ -5,6 +5,7 @@ import { BiSolidMessageAlt } from 'react-icons/bi';
 import HeaderComponent from './HeaderComponent.jsx';
 import AboutComponent from './AboutComponent.jsx';
 import ContactComponent from './ContactComponent.jsx';
+import FaqComponent from './FaqComponent.jsx';
 
 import { notification } from '../../config.js';
 
@@ -12,7 +13,9 @@ const ContentComponent = () => {
     const [toasts, setToasts] = useState([]);
 
     const closeToast = (index) => {
-        setToasts((prevToasts) => prevToasts.filter((_, toastIndex) => toastIndex !== index));
+        setToasts((prevToasts) =>
+            prevToasts.filter((_, toastIndex) => toastIndex !== index)
+        );
     };
 
     useEffect(() => {
@@ -41,21 +44,31 @@ const ContentComponent = () => {
             clearInterval(interval);
         };
     }, []);
+
     return (
         <>
-            <HeaderComponent />
-            <ToastContainer position="middle-end" className="position-fixed m-0 shadow">
-                {toasts.map((item, index) => (
-                    <Toast key={index} bg="danger" show={item.show} delay={5000} autohide onClose={() => closeToast(index)}>
-                        <Toast.Header>
-                            <BiSolidMessageAlt className="me-auto" size={20} />
-                            <small className="fw-bold">{moment(item.updated).locale('en').fromNow()}</small>
-                        </Toast.Header>
-                        <Toast.Body className="fw-bold text-small">{item.message}</Toast.Body>
-                    </Toast>
-                ))}
+            <ToastContainer position="middle-end" className="position-fixed m-1 shadow">
+                {
+                    toasts.map((item, index) => (
+                        <Toast className={`animate__animated ${item.show ? 'animate__fadeInRight' : 'animate__fadeOutRight'}`} key={index} bg="danger" show={item.show} onClose={() => closeToast(index)}>
+                            <Toast.Header>
+                                <BiSolidMessageAlt className="me-auto" size={20} />
+                                <small className="fw-bold">
+                                    {
+                                        moment(item.updated).locale('en').fromNow()
+                                    }
+                                </small>
+                            </Toast.Header>
+                            <Toast.Body className="fw-bold text-small">
+                                {item.message}
+                            </Toast.Body>
+                        </Toast>
+                    ))
+                }
             </ToastContainer>
+            <HeaderComponent />
             <AboutComponent />
+            <FaqComponent />
             <ContactComponent />
         </>
     );

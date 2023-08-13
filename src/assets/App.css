@@ -19,7 +19,6 @@
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  ;
   height: 100vh;
   width: 100vw;
   position: relative;
@@ -126,6 +125,31 @@ nav form button span {
 
 .active {
   color: #ae0000;
+  font-size: 14px;
+  font-weight: bold;
+  text-decoration: overline !important;
+}
+
+button.btn-close,
+button.btn-close:active,
+button.btn-close:focus,
+button.navbar-toggler,
+button.navbar-toggler:active,
+button.navbar-toggler:focus {
+  box-shadow: none;
+  outline: none;
+  border: none;
+}
+
+input.form-control,
+input.form-control:focus,
+input.form-control:active,
+textarea.form-control,
+textarea.form-control:focus,
+textarea.form-control:active {
+  box-shadow: none;
+  outline: none;
+  font-size: small;
   font-weight: bold;
 }
 
@@ -193,6 +217,33 @@ nav form button span {
   opacity: 80%;
 }
 
+.detail-page .container .row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.faq-page {
+  margin-top: 100px;
+  margin-bottom: 50px;
+}
+
+.accordion-item {
+  margin-top: 10px;
+  border: none;
+  outline: none;
+}
+
+.accordion-header button:focus {
+  box-shadow: none;
+  outline: none;
+}
+
+.page-contact {
+  margin: 50px;
+}
+
 .modal-dialog .modal-header .modal-title {
   font-size: 20px;
   font-weight: bold;
@@ -200,6 +251,29 @@ nav form button span {
 
 .modal-dialog .modal-header button.btn-close {
   outline: none;
+}
+
+.slide-img {
+  height: 400px;
+  width: 100%;
+  object-fit: cover;
+  border: 1px solid #000;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+a.carousel-control-prev span,
+a.carousel-control-next span {
+  opacity: 50%;
+  background-color: #000;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
 }
 
 footer {
@@ -227,6 +301,7 @@ footer {
   .content-component .row .col h1 {
     text-decoration: underline;
   }
+
   .content-component .row .col p {
     font-size: 11px;
     font-weight: 700;
@@ -315,12 +390,9 @@ footer {
 }
 
 @media screen and (max-width: 500px) {
-  .home-page {
-    background-attachment: fixed;
-  }
 
   .home-page header .container {
-    padding-top: 50px;
+    padding-top: 40px;
   }
 
   .content-component .row .col {
